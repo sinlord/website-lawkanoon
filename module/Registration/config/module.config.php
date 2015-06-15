@@ -8,12 +8,35 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'Registration\Controller\Registration' =>'Registration\Controller\RegistrationController',
+            //module\Controller\Controller's Name => Module\'Controller\Controller's Name' + 'Controller' this is the convention!!
+            'Registration\Controller\Registration' => 'Registration\Controller\RegistrationController',
+        ),
+    ),
+    'router' => array(
+        'routes' => array(
+            'registration' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/[:controller[/:action[/:id]]]',
+                    'constraints' => array(
+                        'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'         => '[0 - 9]+',
+                    ),
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Registration\Controller',
+                        'controller'    => 'Registration',
+                        'action'        => 'delete',
+                    ),
+
+                ),
+               'may_terminate' => true,
+            ),
         ),
     ),
     'view_manager' => array(
         'template_path_stack' => array(
-            'registration' => __DIR__ . '/../view',
+        'Registration' => __DIR__ .'/../view',
         ),
     ),
 );
