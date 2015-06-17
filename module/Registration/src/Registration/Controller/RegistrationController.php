@@ -9,6 +9,7 @@ namespace Registration\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use Doctrine\ORM\EntityManager;
 
 
 Class RegistrationController extends AbstractActionController
