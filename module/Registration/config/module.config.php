@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ABHI
- * Date: 13/06/15
- * Time: 9:38 PM
- */
+namespace Registration;
+
 return array(
     'controllers' => array(
         'invokables' => array(
@@ -41,14 +37,14 @@ return array(
     ),
     'doctrine' => array(
         'driver' => array(
-            'registration_entities' => array(
-                'class' =>'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+            __NAMESPACE__ . '_driver'  => array(
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
                 'cache' => 'array',
-                'paths' => array(__DIR__ . '/../src/Registration/Entity')
+                'paths' => array('/usr/local/zend/apache2/htdocs/website-lawkanoon/module/Registration/src/Registration/Entity'),
             ),
             'orm_default' => array(
                 'drivers' => array(
-                    'Registration\Entity' => 'registration_entities'
+                    __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver',
                 )
             )
         )

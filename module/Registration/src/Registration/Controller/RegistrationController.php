@@ -1,11 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ABHI
- * Date: 15/06/15
- * Time: 3:14 PM
- */
+
 namespace Registration\Controller;
+
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
@@ -31,5 +27,18 @@ Class RegistrationController extends AbstractActionController
     //Delete
     Public function deleteAction(){
         return new ViewModel();
+    }
+
+    /**
+     * @var DoctrineORMEntityManager
+     */
+    protected $em;
+
+    public function getEntityManager()
+    {
+        if (null === $this->em) {
+            $this->em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
+        }
+        return $this->em;
     }
 }
