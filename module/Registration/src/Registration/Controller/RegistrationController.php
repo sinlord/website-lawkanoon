@@ -5,8 +5,9 @@ namespace Registration\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Doctrine\ORM\EntityManager;
 
+use Doctrine\ORM\EntityManager;
+use \Registration\Entity\User;
 
 Class RegistrationController extends AbstractActionController
 {
@@ -14,6 +15,17 @@ Class RegistrationController extends AbstractActionController
 
     //Retreive
     Public function indexAction(){
+        $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+
+        $user = new User();
+        $user->setFirstName('Abhinav');
+        $user->setLastName('Verma');
+
+        $objectManager->persist($user);
+        $objectManager->flush();
+
+//        die(var_dump($user->getId()));
+
         return new ViewModel();
     }
     //Create
@@ -29,16 +41,4 @@ Class RegistrationController extends AbstractActionController
         return new ViewModel();
     }
 
-    /**
-     * @var DoctrineORMEntityManager
-     */
-    protected $em;
-
-    public function getEntityManager()
-    {
-        if (null === $this->em) {
-            $this->em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
-        }
-        return $this->em;
-    }
 }

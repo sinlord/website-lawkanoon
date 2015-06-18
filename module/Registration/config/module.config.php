@@ -21,8 +21,8 @@ return array(
                     ),
                     'defaults' => array(
                         '__NAMESPACE__' => 'Registration\Controller',
-                        'controller'    => 'Registration',
-                        'action'        => 'delete',
+                        'controller'    => 'registration',
+                        'action'        => 'index',
                     ),
 
                 ),
