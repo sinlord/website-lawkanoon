@@ -8,6 +8,9 @@ use Zend\View\Model\ViewModel;
 
 use Doctrine\ORM\EntityManager;
 use \Registration\Entity\User;
+use Registration\Form\RegistrationForm;
+use Zend\Http\Request;
+
 
 Class RegistrationController extends AbstractActionController
 {
@@ -30,7 +33,34 @@ Class RegistrationController extends AbstractActionController
     }
     //Create
     Public function createAction(){
-        return new ViewModel();
+
+        $form = new RegistrationForm();
+        $form ->get('submit')->setValue('Create');
+
+      //  /* @var $request Zend_Controller_Request_Http */
+
+        $request = $this->getRequest();
+
+        if ($request->isPost()) {       // we can also try $this->getRequest()->getMethod() == 'POST' OR $this->getRequest()->isPost()
+            $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+
+            $user = new User();
+            // This is used when we have defined Input filters in the User.php entity Class
+            $form->setInputFilter($user->getInputFilter());
+            $form->setData($request->getPost());
+
+            if ($form->isValid()) {
+                $user->exchangeArray($form->getData());
+                $objectManager->persist($user);
+                $objectManager->flush();
+
+                // Redirect to list of albums
+                return $this->redirect()->toRoute('registration');
+            }
+        }
+        return array('form' => $form);
+
+ //       return new ViewModel();
     }
     //Update
     Public function updateAction(){

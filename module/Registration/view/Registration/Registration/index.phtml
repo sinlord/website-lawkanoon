@@ -1,10 +1,10 @@
-<HTML>
-<HEAD>
-    <TITLE>Law Kanoon</TITLE>
+<HEAD xmlns="http://www.w3.org/1999/html">
+    <title> <?php echo $this->escapeHtml('Law Kanoon!!!!!!!!'); ?></title>
     <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
     <meta name="keywords" content="law, kanoon, kanun, kanon, indian, justice, order, court, lawyer">
     <meta name="description" content="Information on indian law and order">
-    <LINK HREF="style.css" TYPE="text/css" REL="stylesheet">
+    <a  href= <?php echo $this->headLink()->appendStylesheet('/css/style.css'); ?> </a>
+
 
     <script>
 
@@ -60,11 +60,9 @@
     </script>
 
 
-
-
 </HEAD>
 <BODY BGCOLOR=#FFFFFF LEFTMARGIN=0 TOPMARGIN=0 rightmargin="0" bottommargin="0" MARGINWIDTH=0 MARGINHEIGHT=0
-      onLoad="MM_preloadImages('images/m11.jpg','images/m21.jpg','images/m31.jpg','images/m41.jpg','images/m51.jpg')" onresize="changeImage();" >
+      onLoad="MM_preloadImages('public/img/m11.jpg','public/img/m21.jpg','public/img/m31.jpg','public/img/m41.jpg','public/img/m51.jpg')" onresize="changeImage();" >
 <script type="text/javascript">
     <!-- Hide Javascript
     function changeImage(){
@@ -76,40 +74,39 @@
     -->
 </script>
 
-<script src="change_color.js"></script>
-<h3 id="jstest" onmouseover="changeColor();" onmouseout= "changeAgain();">Rollover!! </h3>
+<!-- <h3 id="jstest" onmouseover="changeColor();" onmouseout= "changeAgain();">Rollover!! </h3> -->
 <center>
     <TABLE WIDTH=712 id="banner1" BORDER=0 CELLPADDING=0 CELLSPACING=0>
         <TR>
             <TD>
                 <TABLE WIDTH=712 BORDER=0 CELLPADDING=0 CELLSPACING=0>
                     <TR>
-                        <TD><IMG SRC="images/spacer.gif" WIDTH=712 HEIGHT=21 ALT=""></TD>
+                        <TD><IMG SRC="<?php echo $this->basePath('img/spacer.gif'); ?>" WIDTH=712 HEIGHT=21 ALT=""></TD>
                     </TR>
                     <TR>
                         <TD>
                             <TABLE WIDTH=712 BORDER=0 CELLPADDING=0 CELLSPACING=0>
                                 <TR>
-                                    <TD><IMG SRC="images/spacer.gif" WIDTH=31 HEIGHT=273 ALT=""></TD>
+                                    <TD><IMG SRC="<?php echo $this->basePath('img/spacer.gif'); ?>" WIDTH=31 HEIGHT=273 ALT=""></TD>
                                     <TD>
                                         <TABLE WIDTH=649 BORDER=0 CELLPADDING=0 CELLSPACING=0>
                                             <TR>
-                                                <TD background="images/4.jpg" WIDTH=649 HEIGHT=75 ALT="">
+                                                <TD background="<?php echo $this->basePath('img/4.jpg'); ?>" WIDTH=649 HEIGHT=75 ALT="">
                                                     <table width="649" border="0" cellspacing="0" cellpadding="0">
                                                         <tr>
                                                             <td width="450"><a href="index.html"><img height="49"
                                                                                                       width="45"
                                                                                                       border="1"
                                                                                                       style="margin-top:5px; margin-left:5px "
-                                                                                                      src="images/logo.jpg"></a>
+                                                                                                      src="<?php echo $this->basePath('img/logo.jpg'); ?>"></a>
                                                             </td>
-                                                            <td width="199"><img src="images/spacer.gif" height="19"
+                                                            <td width="199"><img src="<?php echo $this->basePath('img/spacer.gif'); ?>" height="19"
                                                                                  style="display:block "><a
-                                                                    href="mailto:"><img src="images/link1.jpg"
+                                                                    href="mailto:"><img src="<?php echo $this->basePath('img/link1.jpg'); ?>"
                                                                                         width="32" height="22"
                                                                                         border="0"
                                                                                         style="margin-left:75px "></a><a
-                                                                    href="mailto:"><img src="images/link2.jpg"
+                                                                    href="mailto:"><img src="<?php echo $this->basePath('img/link2.jpg'); ?>"
                                                                                         width="53" height="22"
                                                                                         border="0"
                                                                                         style="margin-left:12px "></a>
@@ -120,40 +117,40 @@
                                                 </TD>
                                             </TR>
                                             <TR>
-                                                <TD background="images/5.jpg" WIDTH=649 HEIGHT=150 ALT="">
+                                                <TD background="<?php echo $this->basePath('img/5.jpg'); ?>" WIDTH=649 HEIGHT=150 ALT="">
                                                     <div style="margin-top:35px; margin-left:464px; width:176px; height:95px "
-                                                         class="top"><img src="images/text.jpg" width="156" height="16">
-                                                        <img src="images/spacer.gif" style="display:block ">
+                                                         class="top"><img src="<?php echo $this->basePath('img/text.jpg'); ?>" width="156" height="16">
+                                                        <img src="<?php echo $this->basePath('img/spacer.gif'); ?>" style="display:block ">
                                                         <strong>One Stop Legal Solution</strong>
-                                                        <img src="images/spacer.gif" style="display:block " height="5">
-                                                        <img src="images/arrt.jpg" width="15" height="15"
+                                                        <img src="<?php echo $this->basePath('img/spacer.gif'); ?>" style="display:block " height="5">
+                                                        <img src="<?php echo $this->basePath('img/arrt.jpg'); ?>" width="15" height="15"
                                                              style="margin-bottom:-4px ">&nbsp; <a href="#" class="top">Corporate
                                                             Law</a>
-                                                        <img src="images/spacer.gif" style="display:block " height="7">
-                                                        <img src="images/arrt.jpg" width="15" height="15"
+                                                        <img src="<?php echo $this->basePath('img/spacer.gif'); ?>" style="display:block " height="7">
+                                                        <img src="<?php echo $this->basePath('img/arrt.jpg'); ?>" width="15" height="15"
                                                              style="margin-bottom:-4px ">&nbsp; <a href="#" class="top">Criminal
                                                             & Family Law</a>
                                                     </div>
                                                 </TD>
                                             </TR>
                                             <TR>
-                                                <TD><IMG SRC="images/6.jpg" WIDTH=649 HEIGHT=8 ALT=""></TD>
+                                                <TD><IMG SRC="<?php echo $this->basePath('img/6.jpg'); ?>" WIDTH=649 HEIGHT=8 ALT=""></TD>
                                             </TR>
                                             <TR>
                                                 <TD>
                                                     <TABLE WIDTH=649 BORDER=0 CELLPADDING=0 CELLSPACING=0>
                                                         <TR>
                                                             <TD><a href="index.html" onMouseOut="MM_swapImgRestore()"
-                                                                   onMouseOver="MM_swapImage('Image25','','images/m11.jpg',1)"><img
-                                                                        src="images/m1.jpg" name="Image25" width="216"
+                                                                   onMouseOver="MM_swapImage('Image25','','<?php echo $this->basePath('img/m11.jpg'); ?>',1)"><img
+                                                                        src="<?php echo $this->basePath('img/m1.jpg'); ?>" name="Image25" width="216"
                                                                         height="40" border="0"></a></TD>
                                                             <TD><a href="index-3.html" onMouseOut="MM_swapImgRestore()"
-                                                                   onMouseOver="MM_swapImage('Image28','','images/m41.jpg',1)"><img
-                                                                        src="images/m4.jpg" name="Image28" width="216"
+                                                                   onMouseOver="MM_swapImage('Image28','','<?php echo $this->basePath('img/m41.jpg'); ?>',1)"><img
+                                                                        src="<?php echo $this->basePath('img/m4.jpg'); ?>" name="Image28" width="216"
                                                                         height="40" border="0"></a></TD>
                                                             <TD><a href="index-4.html" onMouseOut="MM_swapImgRestore()"
-                                                                   onMouseOver="MM_swapImage('Image29','','images/m51.jpg',1)"><img
-                                                                        src="images/m5.jpg" name="Image29" width="216"
+                                                                   onMouseOver="MM_swapImage('Image29','','<?php echo $this->basePath('img/m51.jpg'); ?>',1)"><img
+                                                                        src="<?php echo $this->basePath('img/m5.jpg'); ?>" name="Image29" width="216"
                                                                         height="40" border="0"></a></TD>
                                                         </TR>
                                                     </TABLE>
@@ -161,13 +158,13 @@
                                             </TR>
                                         </TABLE>
                                     </TD>
-                                    <TD><IMG SRC="images/spacer.gif" WIDTH=32 HEIGHT=273 ALT=""></TD>
+                                    <TD><IMG SRC="<?php echo $this->basePath('img/spacer.gif'); ?>" WIDTH=32 HEIGHT=273 ALT=""></TD>
                                 </TR>
                             </TABLE>
                         </TD>
                     </TR>
                     <TR>
-                        <TD><IMG SRC="images/3.jpg" WIDTH=712 HEIGHT=4 ALT=""></TD>
+                        <TD><IMG SRC="<?php echo $this->basePath('img/3.jpg'); ?>" WIDTH=712 HEIGHT=4 ALT=""></TD>
                     </TR>
                 </TABLE>
             </TD>
@@ -228,13 +225,13 @@
                         </TD>
                     </TR>
                     <TR>
-                        <TD WIDTH=712 HEIGHT=89 ALT=""><img src="images/spacer.gif" height="17" style="display:block ">
-                            <a href="#"><img src="images/ban1.jpg" width="195" height="72" border="0"
-                                             style="margin-left:33px "></a><a href="#"><img src="images/ban2.jpg"
+                        <TD WIDTH=712 HEIGHT=89 ALT=""><img src="<?php echo $this->basePath('img/spacer.gif'); ?>" height="17" style="display:block ">
+                            <a href="#"><img src="<?php echo $this->basePath('img/ban1.jpg'); ?>" width="195" height="72" border="0"
+                                             style="margin-left:33px "></a><a href="#"><img src="<?php echo $this->basePath('img/ban2.jpg'); ?>"
                                                                                             width="203" height="72"
                                                                                             border="0"
                                                                                             style="margin-left:21px "></a><a
-                                href="#"><img src="images/ban3.jpg" width="207" height="72" border="0"
+                                href="#"><img src="<?php echo $this->basePath('img/ban3.jpg'); ?>" width="207" height="72" border="0"
                                               style="margin-left:21px "></a>
                         </TD>
                     </TR>
@@ -243,29 +240,28 @@
         </TR>
         <TR>
             <TD>
-                <IMG SRC="images/spacer.gif" WIDTH=712 HEIGHT=21 ALT=""></TD>
+                <IMG SRC="<?php echo $this->basePath('img/spacer.gif'); ?>" WIDTH=712 HEIGHT=21 ALT=""></TD>
         </TR>
         <TR>
             <TD>
-                <IMG SRC="images/1.jpg" WIDTH=712 HEIGHT=3 ALT=""></TD>
+                <IMG SRC="<?php echo $this->basePath('img/1.jpg'); ?>" WIDTH=712 HEIGHT=3 ALT=""></TD>
         </TR>
         <TR>
-            <td height="25" width="712" background="images/bak1.jpg" class="menu" style="padding-top:6px; padding-bottom:6px; text-align:center " alt="">
-                <a class="menu" href="index.html">Legal Knowledge</a> <img height="1" width="7" src="images/spacer.gif">
-                |<img height="1" width="7" src="images/spacer.gif"> <a class="menu" href="index-3.html">Disclaimer</a> <img height="1" width="7" src="images/spacer.gif">|<img height="1" width="7" src="images/spacer.gif"> <a class="menu" href="index-4.html">Contact Us</a></td>
+            <td height="25" width="712" background="<?php echo $this->basePath('img/bak1.jpg'); ?>" class="menu" style="padding-top:6px; padding-bottom:6px; text-align:center " alt="">
+                <a class="menu" href="index.html">Legal Knowledge</a> <img height="1" width="7" src="<?php echo $this->basePath('img/spacer.gif'); ?>">
+                |<img height="1" width="7" src="<?php echo $this->basePath('img/spacer.gif'); ?>"> <a class="menu" href="index-3.html">Disclaimer</a> <img height="1" width="7" src="<?php echo $this->basePath('img/spacer.gif'); ?>">|<img height="1" width="7" src="<?php echo $this->basePath('img/spacer.gif'); ?>"> <a class="menu" href="index-4.html">Contact Us</a></td>
         </TR>
         <TR>
             <TD>
-                <IMG SRC="images/2.jpg" WIDTH=712 HEIGHT=7 ALT=""></TD>
+                <IMG SRC='<?php echo $this->basePath('img/2.jpg'); ?>' WIDTH=712 HEIGHT=7 ALT=""></TD>
         </TR>
-        <TR>
-            <TD bgcolor="#FFFFFF" WIDTH=712 HEIGHT=44 ALT="" style="padding-top:7px; text-align:center "
-                class="copy">&copy; Copyright All right reserved 2014<strong> <a href="#" class="copy">Privacy
-                        policy</a> | <a href="#" class="copy">Terms of use</a></strong></TD>
-        </TR>
-    </TABLE>
-</center>
-<p style="text-align:center;font-family:Tahoma;font-size:12px;">
-    <a href="http://supremecourtofindia.nic.in" target="_blank" style="font-size:12px;font-weight:bold;" title="Supreme Court website">Supreme Court Of India</a> Courtesy by LawKanoon</p>
-</BODY>
-</HTML>
+        <!--      <TR>
+                  <TD bgcolor="#FFFFFF" WIDTH=712 HEIGHT=44 ALT="" style="padding-top:7px; text-align:center "
+                      class="copy">&copy; Copyright All right reserved 2014<strong> <a href="#" class="copy">Privacy
+                              policy</a> | <a href="#" class="copy">Terms of use</a></strong></TD>
+              </TR>-->
+          </TABLE>
+      </center>
+      <!-- ... <p style="text-align:center;font-family:Tahoma;font-size:12px;">
+          <a href="http://supremecourtofindia.nic.in" target="_blank" style="font-size:12px;font-weight:bold;" title="Supreme Court website">Supreme Court Of India</a> Courtesy by LawKanoon</p> -->
+ </BODY>
